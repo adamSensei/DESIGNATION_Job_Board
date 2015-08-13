@@ -1,0 +1,301 @@
+<html><head>
+  <link rel="stylesheet" type="text/css" class="__meteor-css__" href="/3882207cb0e3521c991982bde0ee543c96046782.css">
+
+
+<script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.1.0.2%22%2C%22ROOT_URL%22%3A%22http%3A%2F%2Flocalhost%3A3000%2F%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%22%2C%22appId%22%3A%22ecew691gc6vnr8sc76h%22%2C%22accountsConfigCalled%22%3Atrue%2C%22autoupdateVersion%22%3A%2256a407d872b36f2ba62a7ae918815edbaf4b5b87%22%2C%22autoupdateVersionRefreshable%22%3A%22a8d786c5aefd0e0b11e4ac518859ae05a0824bb7%22%2C%22autoupdateVersionCordova%22%3A%22none%22%7D"));</script><style type="text/css"></style>
+
+  <script type="text/javascript" src="/packages/underscore.js?0a80a8623e1b40b5df5a05582f288ddd586eaa18"></script>
+  <script type="text/javascript" src="/packages/meteor.js?43b7958c1598803e94014f27f5f622b0bddc0aaf"></script>
+  <script type="text/javascript" src="/packages/json.js?e22856eae714c681199eabc5c0710b904b125554"></script>
+  <script type="text/javascript" src="/packages/base64.js?1a63019243b73298e2964e6d4680f25bca657726"></script>
+  <script type="text/javascript" src="/packages/ejson.js?71047b64b5196348bdbe5fd5eea9ac97a5a9eb14"></script>
+  <script type="text/javascript" src="/packages/logging.js?07e201b648f16be8435a4f666156995eeda0c750"></script>
+  <script type="text/javascript" src="/packages/reload.js?da8974b7231dd8c0caccb5f322dcf97329d486d1"></script>
+  <script type="text/javascript" src="/packages/tracker.js?6d0890939291d9780f7e2607ee3af3e7f98a3d9c"></script>
+  <script type="text/javascript" src="/packages/random.js?fe7b46080c91ce482acf6fc326afbc5b176f0502"></script>
+  <script type="text/javascript" src="/packages/retry.js?1f1dd2c35d300110fdaba51ce4473583bc3bf031"></script>
+  <script type="text/javascript" src="/packages/check.js?ac81167b8513b85b926c167bba423981b0c4cf9c"></script>
+  <script type="text/javascript" src="/packages/id-map.js?9ea6eaae8d74693ce2505a858d9a5e60cf191298"></script>
+  <script type="text/javascript" src="/packages/ordered-dict.js?bf8af2f26c8d96bf8b2e6b407d3ed69f23c2cd37"></script>
+  <script type="text/javascript" src="/packages/geojson-utils.js?81b79d5cf96d00b4b7a28987debcffb665c17526"></script>
+  <script type="text/javascript" src="/packages/minimongo.js?af9eb9d7447544ca9b839a3dcf7ed2da2209b56c"></script>
+  <script type="text/javascript" src="/packages/ddp.js?d1840d3ba04c65ffade261f362e26699b7509706"></script>
+  <script type="text/javascript" src="/packages/mongo.js?3cfe0c5981c197df33036a37574850f057e934a6"></script>
+  <script type="text/javascript" src="/packages/autoupdate.js?9a5ea03bf057815385bf569c7acc2c285c005491"></script>
+  <script type="text/javascript" src="/packages/meteor-platform.js?499a2f8522e25820b1153c69a92751ccaae507b3"></script>
+  <script type="text/javascript" src="/packages/less.js?7d1bf981a25a449d6270558bcfc983313c40cd26"></script>
+  <script type="text/javascript" src="/packages/localstorage.js?9ec7d68858d2e33aa807e5cfd5e12bb4d62fe00c"></script>
+  <script type="text/javascript" src="/packages/callback-hook.js?2dd5338ef4585da6eadefd19681e01ae0a1cd8d7"></script>
+  <script type="text/javascript" src="/packages/jquery.js?dd8bac56f8fd3666d433d2285ae01e52597cc51a"></script>
+  <script type="text/javascript" src="/packages/deps.js?504589e1e9585dec8f9f6094e5a87b22de3783a1"></script>
+  <script type="text/javascript" src="/packages/htmljs.js?567eb96d5d22631c03d6aca6afa4c42f0d1295f2"></script>
+  <script type="text/javascript" src="/packages/observe-sequence.js?0532a9dd76dd78f543eb4d79a1e429df186d8bde"></script>
+  <script type="text/javascript" src="/packages/reactive-var.js?20335b7b37165980ddd9f23943b2e5b00aae1cc2"></script>
+  <script type="text/javascript" src="/packages/blaze.js?a5c324925e5f6e800a4c618d71caf2848b53bf51"></script>
+  <script type="text/javascript" src="/packages/accounts-base.js?7c29db5c21a76726509bb6bb2a68a2b4b1ecf657"></script>
+  <script type="text/javascript" src="/packages/service-configuration.js?262da6fb1e9c97be84333c429c9a2929c80f8e3b"></script>
+  <script type="text/javascript" src="/packages/templating.js?376767bb0d2463b3b2615a1b90e77f6b22d39d7b"></script>
+  <script type="text/javascript" src="/packages/reactive-dict.js?1cb61826ceb23464171f17c2191c7e04a9b91508"></script>
+  <script type="text/javascript" src="/packages/session.js?daf192a7244079d45db32a6fc26ebc3881fc1aa3"></script>
+  <script type="text/javascript" src="/packages/url.js?2312d739008b2ffa52f13c77c5d6fc59c9e17d56"></script>
+  <script type="text/javascript" src="/packages/oauth.js?f920ea4efaa1a497bedf1222ede721c417350dca"></script>
+  <script type="text/javascript" src="/packages/accounts-oauth.js?22d7668f8f57baf74a59fad0ff324ca5004edcbb"></script>
+  <script type="text/javascript" src="/packages/npm-bcrypt.js?4b480ddc27b097ce17a5976c52fda305f2ec634d"></script>
+  <script type="text/javascript" src="/packages/sha.js?65ef52f7221944768bfc2049d6b7e163c8ae2615"></script>
+  <script type="text/javascript" src="/packages/srp.js?e2e28156e8c912d504a3586351c8a1119f664cfd"></script>
+  <script type="text/javascript" src="/packages/accounts-password.js?3845cc71ad2dc1378b7d8cc4164a78359506dd40"></script>
+  <script type="text/javascript" src="/packages/accounts-ui-unstyled.js?14a3fc68e1a01e2a5a37fa082ac84346e46ba1de"></script>
+  <script type="text/javascript" src="/packages/accounts-ui.js?1ff79db616cce9b320fe8aed6103eded31248467"></script>
+  <script type="text/javascript" src="/packages/oauth2.js?5fa58098b89a1467037a0b8eb4b17ad33b72cf07"></script>
+  <script type="text/javascript" src="/packages/facebook.js?e8bc0ab4c4ab696c2c04e3494f3a08fbbfdaeff7"></script>
+  <script type="text/javascript" src="/packages/accounts-facebook.js?9e890f917b8ec3c3ea39544407a7e982dbc6d5ae"></script>
+  <script type="text/javascript" src="/packages/github.js?a254d96e4c33a46c65e140e2729cfa129fe60118"></script>
+  <script type="text/javascript" src="/packages/accounts-github.js?cd8e0996c426b07b63ab8131432e3cbb1bf3f6b9"></script>
+  <script type="text/javascript" src="/packages/google.js?fb293d20cf8385f8c70b4e3f6be3fb83d9c2da90"></script>
+  <script type="text/javascript" src="/packages/accounts-google.js?9ef9953d728cd324cfd7280e7b31c1b89ce5eed5"></script>
+  <script type="text/javascript" src="/packages/http.js?c3c7d0da66f683af57294173733637845f39253a"></script>
+  <script type="text/javascript" src="/packages/oauth1.js?6c8a243dd3199e6507c7bb6bd1e711a90b27dbcb"></script>
+  <script type="text/javascript" src="/packages/twitter.js?c15b78e01589695814fe4b10e1864a09a39718bc"></script>
+  <script type="text/javascript" src="/packages/accounts-twitter.js?a1c5862c55c6bf951b845bee147062ac1d5fb3d4"></script>
+  <script type="text/javascript" src="/packages/meteor-developer.js?0a98e5996dbf6ca2d5eb9455a75a5825c11d466c"></script>
+  <script type="text/javascript" src="/packages/accounts-meteor-developer.js?72d3125dcd479a5aad54f1d702cca344ac0d22e9"></script>
+  <script type="text/javascript" src="/packages/spiderable.js?15e83f35886e22f2be2943f973bc7bb284bf8153"></script>
+  <script type="text/javascript" src="/packages/ui.js?5a663333fd30f8fd913f110e0ef779e84f67c4b8"></script>
+  <script type="text/javascript" src="/packages/iron_core.js?d966a1f70c94792fd94c8a155bdbef9bec5e0047"></script>
+  <script type="text/javascript" src="/packages/iron_dynamic-template.js?ccf1d8e4c1e95e99af04ba0ac922dbd8099fb0bd"></script>
+  <script type="text/javascript" src="/packages/iron_layout.js?4e65c46acdaf0ce6a8b1a479d7b9d0b5c0902062"></script>
+  <script type="text/javascript" src="/packages/iron_url.js?f73de31c2603555662bc2fa86029a2e04c9ea051"></script>
+  <script type="text/javascript" src="/packages/iron_middleware-stack.js?56e0c02a758f48c0a704ca978a8fb6d7bd9ebbab"></script>
+  <script type="text/javascript" src="/packages/iron_location.js?ca4f0f6672edbfb6cafab6e5c024208d9364eac9"></script>
+  <script type="text/javascript" src="/packages/iron_controller.js?5a7eedaafda7001b9d5cb52322a419bbb758968c"></script>
+  <script type="text/javascript" src="/packages/iron_router.js?7b16fe70bccff9182aca02afb2ccd7708ac57c64"></script>
+  <script type="text/javascript" src="/packages/natestrauser_font-awesome.js?c20643c88381433f22ebfda4c3ae4f1c5ad1490c"></script><link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="/packages/raix_handlebar-helpers.js?7d3b7f73925dd049e8e445e82fec12071446eebe"></script>
+  <script type="text/javascript" src="/packages/momentjs_moment.js?f4be9c00fb539cb47def6124306941f6a53c5760"></script>
+  <script type="text/javascript" src="/packages/aldeed_simple-schema.js?e210968641793751997ffe233af33b53af8566e4"></script>
+  <script type="text/javascript" src="/packages/livedata.js?718526445deb4d9baacb6d92c551adea1d36c1e1"></script>
+  <script type="text/javascript" src="/packages/aldeed_collection2.js?fdc7f0975dd1b3446ea4afd5f820cb1242a521af"></script>
+  <script type="text/javascript" src="/packages/aldeed_autoform.js?b2b90d28d5cc29be68358bb3c8bb8a337992a7dd"></script>
+  <script type="text/javascript" src="/packages/coffeescript.js?969f68786bbc68e6cad299e74922a53af3d1404b"></script>
+  <script type="text/javascript" src="/packages/multiply_iron-router-progress.js?d6901ad320d303faba5903053ba69fe04ffe63ed"></script>
+  <script type="text/javascript" src="/packages/pauli_linkedin.js?0d2375e8313ba72b5dfbaeacdcc8983f48f840fb"></script>
+  <script type="text/javascript" src="/packages/pauli_accounts-linkedin.js?99cd7818d83a008ed637e4ad35cbc70f842d234c"></script>
+  <script type="text/javascript" src="/packages/natestrauser_connection-banner.js?c910eae1f630ff138edee63e10ef381f1a60a4b5"></script>
+  <script type="text/javascript" src="/packages/dfischer_phantomjs.js?99bed03dd0d92c19ae0fbb39bb12fc6e6cf3a1c5"></script>
+  <script type="text/javascript" src="/packages/lampe_rssfeed.js?11b12332dd8f717788a4e8fdcc12c57e3c4ea807"></script>
+  <script type="text/javascript" src="/packages/meteorhacks_meteorx.js?afd5ff95b1c1492f60049925f1f827e2b5817bbb"></script>
+  <script type="text/javascript" src="/packages/meteorhacks_kadira.js?fab80eae1880b8f4ae3fde00b4db51ba791a2647"></script>
+  <script type="text/javascript" src="/packages/mongo-livedata.js?e6ebca489f38b73788b494509a4f83d87fdbf6c0"></script>
+  <script type="text/javascript" src="/packages/aldeed_delete-button.js?5374a4599af02af385dd7a72d89f3c1f5fe70deb"></script>
+  <script type="text/javascript" src="/packages/useraccounts_core.js?9d736a8be4984b93d6c1b3816e0ee5b68feb4cc5"></script>
+  <script type="text/javascript" src="/packages/softwarerero_accounts-t9n.js?421af9fd7a520d437260aa1ff9aee492ccc6c52a"></script>
+  <script type="text/javascript" src="/packages/useraccounts_bootstrap.js?31b416e371d8ea38cf4c9b079f3ebab05c1e40b3"></script>
+  <script type="text/javascript" src="/packages/meteorhacks_subs-manager.js?da3678780a848e13b3cb4f5a3d9dbdce15bd8ffe"></script>
+  <script type="text/javascript" src="/packages/dburles_collection-helpers.js?b2a4d3580ed2804e09676754c47bcebe7a361fa8"></script>
+  <script type="text/javascript" src="/packages/alanning_roles.js?79ec06e46df4edfbc286f83d1ad8064d46d44990"></script>
+  <script type="text/javascript" src="/packages/nemo64_bootstrap-data.js?5668c42202b40f6c6ea45d87def47b9c6ced760c"></script>
+  <script type="text/javascript" src="/packages/nemo64_bootstrap.js?ec67e21097838440b595b9cec9f3aca5493efadb"></script>
+  <script type="text/javascript" src="/packages/underscorestring_underscore.string.js?2e461c5202d11ff1c40e7d6ac3437b7749a9ac3c"></script>
+  <script type="text/javascript" src="/packages/zimme_iron-router-active.js?6bcd89bba87b03a407f6e20d33daf14ec17b1755"></script>
+  <script type="text/javascript" src="/packages/percolate_migrations.js?00c724eddf4b469d9b5680c6fc7019fc5fc18f13"></script>
+  <script type="text/javascript" src="/packages/jparker_crypto-core.js?8d7a2b0f9acbbc7dbf0bbbceed45257c91418bbc"></script>
+  <script type="text/javascript" src="/packages/jparker_crypto-md5.js?10c2710f182ea3d81d6b1e2deda16f8f37d3a607"></script>
+  <script type="text/javascript" src="/packages/tmeasday_publish-counts.js?bad42c1c6e710d1a6fee2b3b1a94d5e7e55a1871"></script>
+  <script type="text/javascript" src="/packages/stylus.js?48b7e3e0953c004a73211d7489462e73ed11be2c"></script>
+  <script type="text/javascript" src="/packages/jparker_gravatar.js?7c397392549dc8d918d0cea6fc18378e402010e9"></script>
+  <script type="text/javascript" src="/packages/bengott_avatar.js?ad66f4dba10bd7cf74f3b63a6a20b9093c30dacb"></script>
+  <script type="text/javascript" src="/packages/matb33_collection-hooks.js?2e99e9c5b386370e239a2804efc4ec077cc5bb3c"></script>
+  <script type="text/javascript" src="/packages/percolatestudio_synced-cron.js?ce4455591d0b3edd1b7e3cf30df0ef7a3af2f93d"></script>
+  <script type="text/javascript" src="/packages/reywood_publish-composite.js?f8a4b4678e93f2105df0857cbdfdac20530f2702"></script>
+  <script type="text/javascript" src="/packages/nimble_restivus.js?9c694c86b86e03e8c413ae0da2f24e56c7b474f4"></script>
+  <script type="text/javascript" src="/packages/peppelg_bootstrap-3-modal.js?602d7bbb70a557df9edcefa8bf7dffdc5c4c0d57"></script>
+  <script type="text/javascript" src="/packages/summernote_standalone.js?a766b101c3119ce49ce06e8df739372acb659a9e"></script>
+  <script type="text/javascript" src="/packages/mpowaga_autoform-summernote.js?488bebf7025ee05c4a500088736529ab7b3828b7"></script>
+  <script type="text/javascript" src="/packages/djedi_sanitize-html.js?bdee7bda2ad0671201e63f9cb3180ab6d1a07ad3"></script>
+  <script type="text/javascript" src="/packages/email.js?911578310472ff10dca16a5306b7f455801d0f35"></script>
+  <script type="text/javascript" src="/packages/gadicohen_sitemaps.js?37a4e6bc0b312e552392aa9b8672e40fde6ec70c"></script>
+  <script type="text/javascript" src="/packages/natestrauser_uploadcare-plus.js?06b346d56329cb01d7c3e31addd74ab33ab54d1f"></script>
+  <script type="text/javascript" src="/packages/aldeed_template-extension.js?e59ede23b37f7e2bfd2c66c3e72a2f72c60bb964"></script>
+  <script type="text/javascript" src="/packages/spacebars.js?7bafbe05ec09b6bbb6a3b276537e4995ab298a2f"></script>
+  <script type="text/javascript" src="/packages/alethes_pages.js?880d02062f225bbd69e5852c934f32f79bbaa468"></script>
+  <script type="text/javascript" src="/packages/yogiben_admin.js?a7fdf607290112b2513222ed9a85385d419be89a"></script>
+  <script type="text/javascript" src="/packages/ongoworks_speakingurl.js?3ca6777362e84b23e1a3743ed79ac1147c9da43c"></script>
+  <script type="text/javascript" src="/packages/reywood_iron-router-ga.js?347c8d22ba79156c007cf33e82c8460c7b704e52"></script>
+  <script type="text/javascript" src="/packages/webapp.js?e1be090051b82f046484dccc2de7d747e50c7328"></script>
+  <script type="text/javascript" src="/packages/launch-screen.js?495e58cf2465ba553324c68301cc62076b1fda1e"></script>
+  <script type="text/javascript" src="/packages/global-imports.js?bd9c51e8b78ba15e01bf76b5d32ad23c2c87e59e"></script>
+  <script type="text/javascript" src="/client/views/includes/template.footer.js?e78a439065b2ff16c8648ef4e44ba98a43deece9"></script>
+  <script type="text/javascript" src="/client/views/includes/template.header.js?2ffdb9085150802dacb71df8dd974fa977f53e6f"></script>
+  <script type="text/javascript" src="/client/views/includes/template.layout.js?b382906a0863ab59fa7ff199a57947c4cfa3a193"></script>
+  <script type="text/javascript" src="/client/views/includes/template.loading.js?35701c5116bd7971ffc55c598297de053d2851c6"></script>
+  <script type="text/javascript" src="/client/views/includes/template.notFound.js?c396b24bbe538e9309939b4bc3ecc6c873fa04b6"></script>
+  <script type="text/javascript" src="/client/views/jobs/template.job.js?8e95714631b4bae61902f9f71b39ffbe6a959a3b"></script>
+  <script type="text/javascript" src="/client/views/jobs/template.jobForms.js?2f6af30281751dddc50831d35b0ec194d6e1705b"></script>
+  <script type="text/javascript" src="/client/views/jobs/template.jobIncludes.js?9cbf21bf0d4b1a025d90adbb1d161ff34240b1d8"></script>
+  <script type="text/javascript" src="/client/views/jobs/template.jobSmall.js?bd0ebfb75d96061d911c6ef9f6d623cde94b27f4"></script>
+  <script type="text/javascript" src="/client/views/jobs/template.jobs.js?790202fd08354352a373c7d31d01972b793c1be1"></script>
+  <script type="text/javascript" src="/client/views/jobs/template.jobsRecent.js?f1887f9e559bb004c0e92929d75ec5348cfc681b"></script>
+  <script type="text/javascript" src="/client/views/jobs/template.myJobs.js?5c77a4c850cbe348cae1ed39d9309931de35eaed"></script>
+  <script type="text/javascript" src="/client/views/profiles/template.profile.js?71c34194a07b1f7e38fdb88284f28a2c314bed14"></script>
+  <script type="text/javascript" src="/client/views/profiles/template.profileForms.js?5d9c82fda2d140fb9fbd1d0a974b63615a05d8ef"></script>
+  <script type="text/javascript" src="/client/views/profiles/template.profileSmall.js?f146c9cba18b4682898beb51ecd4770bd92cc394"></script>
+  <script type="text/javascript" src="/client/views/profiles/template.profiles.js?92659698595a4804e522af2faea480b6e190be03"></script>
+  <script type="text/javascript" src="/client/views/profiles/template.profilesRecent.js?ceee926816229b30ba2f0b71deb1713293bc1caa"></script>
+  <script type="text/javascript" src="/client/views/user/template.userProfile.js?f0e1bdd56c5b002737472e04d6ee2a3e00e1a5e5"></script>
+  <script type="text/javascript" src="/client/views/template.home.js?fefb9ef5deb91850aeaa3e4f7b6bbac1e4401006"></script>
+  <script type="text/javascript" src="/bootstrap/js/transition.js?506c40035e0d22560478629434d0fea27643b77a"></script>
+  <script type="text/javascript" src="/bootstrap/js/collapse.js?988565bc2cb402d63ed5c5fd7ff47c4278efc2c5"></script>
+  <script type="text/javascript" src="/bootstrap/js/dropdown.js?3649933246068d9092fca5f6b5f74ac729f9ed6e"></script>
+  <script type="text/javascript" src="/bootstrap/js/modal.js?7c5ddc981562d16cb5e6f9fd8acc7ccd267d019e"></script>
+  <script type="text/javascript" src="/bootstrap/js/tooltip.js?d3870c5c4a389658dca294ae3ab97f60eaee20af"></script>
+  <script type="text/javascript" src="/bootstrap/js/popover.js?4eabc6aa7c985f108f87d8ae52cd5849aa816b04"></script>
+  <script type="text/javascript" src="/bootstrap/js/carousel.js?eab3f75f8f738dad793c6a1a296fc637c0093f6f"></script>
+  <script type="text/javascript" src="/bootstrap/js/affix.js?93fe889d6bf7d12bfad27458fe0ff2503f100f55"></script>
+  <script type="text/javascript" src="/bootstrap/js/alert.js?e60afea5b73b34c3fd4e3e00b3ccbe90db85c3a0"></script>
+  <script type="text/javascript" src="/bootstrap/js/button.js?760d75f778442d40f4377239fd8bf558679de33f"></script>
+  <script type="text/javascript" src="/bootstrap/js/scrollspy.js?5f828f679b7e0248dda9f3b17f7129946459fb66"></script>
+  <script type="text/javascript" src="/bootstrap/js/tab.js?9edacfd7e9dc8246f2afc87badc2725c959e6b27"></script>
+  <script type="text/javascript" src="/lib/accounts.js?088ea4e778916685c67380a21d6cd95bcb5f1976"></script>
+  <script type="text/javascript" src="/lib/admin.js?d2fd140622e2503a8a53d154311cfdb104f019d7"></script>
+  <script type="text/javascript" src="/lib/avatar.js?65959bcacfc1e6e2f68a03102fcdd8e47450df9e"></script>
+  <script type="text/javascript" src="/lib/constants.js?d9c48e9109649d9ee41f7c93ced63705733c1456"></script>
+  <script type="text/javascript" src="/lib/helpers.js?67e58f56de97be7aef2718dd013dfda4204b17c3"></script>
+  <script type="text/javascript" src="/client/views/includes/header.js?838aff92f13f7643cd749cdeb25e697322b4f787"></script>
+  <script type="text/javascript" src="/client/views/jobs/job.js?fc33a033ef654e81c24f459818a9a574ff7ec8c1"></script>
+  <script type="text/javascript" src="/client/views/jobs/jobForms.js?7f54d543d2e5a0f3afa72c46012e96b392809211"></script>
+  <script type="text/javascript" src="/client/views/jobs/jobIncludes.js?978ab793a2c46d8dad13bfebf2060e082aa139c9"></script>
+  <script type="text/javascript" src="/client/views/jobs/jobsRecent.js?3175002a2e843a6ca1007171e01d8ba89f093eaf"></script>
+  <script type="text/javascript" src="/client/views/profiles/profile.js?93e2e5997e8d5f81f975c375cf81ba2816d1b86b"></script>
+  <script type="text/javascript" src="/client/views/profiles/profileForms.js?9316f4596ec3bfc95a50464c294b3962dbbd65ee"></script>
+  <script type="text/javascript" src="/client/views/user/userProfile.js?3d0abbb5b92b1654888778f1eb4fd1fa2dedebe3"></script>
+  <script type="text/javascript" src="/client/autorun.js?9b6036d65baaeef714895e7caa8333f90789b6af"></script>
+  <script type="text/javascript" src="/client/helpers.js?3995687ec988b1b8fd95c35200e7b599769f2f5f"></script>
+  <script type="text/javascript" src="/client/subscriptions.js?36c8eea7c74b9aa47fc5ddefedab0a48dbf0bdf9"></script>
+  <script type="text/javascript" src="/collections/jobs.js?4db78074e4104095004a85f77b0f13b4b05e12af"></script>
+  <script type="text/javascript" src="/collections/profiles.js?c7288db564820a793dc2995b5e869382f236655c"></script>
+  <script type="text/javascript" src="/collections/users.js?b44352e0482890a8cdbee86bb10cf03db20128f9"></script>
+  <script type="text/javascript" src="/router.js?dd18fe41cb0817145543cf57f4a88b017912de47"></script>
+
+
+
+<meta name="fragment" content="!">
+<script id="irga-analytics" async="" src="//www.google-analytics.com/analytics.js"></script>
+<title>We Work Meteor - Job board and developer listing just for Meteor</title>
+  <meta name="description" content="We Work Meteor is a job board and community space for users of the Meteor.  This site provides a complete listing of positions requiring the Meteor skill set, as well as to profiles for meteor developers experts for hire.">
+	<meta name="keywords" content="Meteor,Jobs,Developers,Contracts,Freelance,Remote,Telecommute,Consultants">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+	<link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+
+
+
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+    
+  <section id="header">
+		
+		
+	
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">DESIGNATION</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="/jobs">Jobs</a></li>
+						<li></li>
+						
+						
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						
+							<li><a href="/sign-in">Log In</a></li>
+							<li><a href="/sign-up">Sign Up</a></li>
+						
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</section>
+	<div id="content-wrapper">
+		<div class="jumbotron container-fluid">
+		<div class="container text-center">
+			
+			
+			
+			
+			<div id="callToAction" class="row">
+				<a class="col-sm-4 col-sm-offset-1 col-xs-12 text-center btn btn-primary btn-md" role="button" href="/job">Post A Job</a>
+				
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<section id="jobsRecent">
+		<div class="row">
+			<div class="col-sm-4">
+				<h2>Jobs </h2> 
+			</div>
+			<div class="col-sm-4 text-center">
+				Last post about 
+			</div>
+			<div class="col-sm-4 text-right">
+				<a href="/rss/jobs" target="_blank"><i class="fa fa-rss fa-2x"></i></a>
+			</div>
+		</div>
+		
+		<div class="panel panel-default">
+			<div class="panel-body text-center">
+				<h4><a href="/jobs">View All 0 Jobs&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a></h4>
+			</div>
+		</div>
+	</section>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-12">
+				
+			</div>
+		</div>
+	</div>
+	</div>
+	<footer class="container-fluid">
+		<div class="row">
+			
+		</div>
+		
+		<div class="row">
+			
+		</div>
+	</footer><div style="display: none;"><div class="niice-bar" id="niice-bar">
+    <div class="boards">
+    </div>
+    <div class="loading-spinner">Loading…</div>
+    <div class="error-text">
+      <span class="msg"></span>
+      <span class="close-cross">×</span>
+    </div>
+</div>
+</div><div id="window-resizer-tooltip" style="display: none;"><a href="#" title="Edit settings"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth">1396</span> x <span class="tooltipHeight" id="winHeight">877</span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth">1396</span> x <span class="tooltipHeight" id="vpHeight">782</span></div></body></html>
