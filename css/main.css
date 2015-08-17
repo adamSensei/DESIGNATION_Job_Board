@@ -41,7 +41,7 @@ body a:hover {
 /*FILTERS SECTION START*/
 
 .filters {
-	padding: 10px 40px 30px 40px;
+	padding: 10px 30px 30px 40px;
 	list-style: none;
 	text-align: left;
 	position: fixed;
@@ -51,39 +51,9 @@ body a:hover {
 	margin-top: 50px;
 }
 
-.filter_title {
-	color: #AfA0A1;
-	font-size: 18px;
-}
-
-.filter_list {
-	list-style: none;
-
-}
-
-.filter_space {
-	margin-top: 20px;
-}
-
 .side_width {
 	width: 245px;
 }
-
-.toggle_buttons {
-	display: inline-block;
-	padding: 6px;
-	margin: 4px;
-	border: 1px solid black;
-	border-radius: 100px;
-}
-
-.toggle_buttons:hover {
-	border: 1px solid #FB253D;
-	background-color: #FB253D;
-	color: #FEFBFC;
-	cursor: pointer;
-}
-
 
 /*FILTERS SECTION END*/
 
@@ -102,6 +72,14 @@ body a:hover {
 	display: inline-block;
 }
 
+.icon {
+	color: #AfA0A1;
+}
+.search_form input {
+	font-family: "Futura", sans-serif;
+	font-size: 20px;
+}
+
 .post_button {
 	border: 2px solid #fb253d;
 	padding: 5px;
@@ -110,7 +88,7 @@ body a:hover {
 	text-decoration: none;
 	color: white;
 	font-size: 20px;
-	margin-left: 41vw;
+	margin-left: 39vw;
 }
 
 .post_button:hover {
@@ -210,4 +188,192 @@ body a:hover {
 #Container .mix{
 	display: none;
 }
+
+
+button{
+  font-family: 'Helvetica Neue', arial, sans-serif;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+ 
+/**
+ * Form & Checkbox Styles
+ */
+
+h4{
+  font-weight: 700;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid #E7E2E3;
+  color: #AfA0A1;
+  font-size: 18px;
+}
+ 
+label{
+  font-weight: 300;
+}
+ 
+button{
+  display: inline-block;
+  vertical-align: middle;
+  padding: .4em .8em;
+  margin: 0;
+  background: #fb253d;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  float: right;
+  box-shadow: 0 0 0 rgba(255,255,255,0.5) inset,0 0 0 rgba(255,255,255,0.1) inset,0 4px 0 #cc2338,0 4px 2px rgba(0,0,0,0.5);
+}
+ 
+button:focus{
+  outline: 0 none;
+}
+ 
+.controls{
+  padding: 2%;
+}
+ 
+fieldset{
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 1em 0 0;
+  padding: .5em;
+  border:none;
+  width: 100%;
+}
+
+.checkbox{
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 8px;
+  border-radius: 100px;
+}
+
+.checkbox input[type="checkbox"]{
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.checkbox label{
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  padding-left: 1.5em;
+}
+
+.checkbox label:before,
+.checkbox label:after{
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.checkbox label:before{
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.checkbox label:after{
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: #fb253d;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.checkbox input:checked ~ label:after{
+  opacity: 1;
+}
+
+.checkbox input:focus ~ label:before{
+  background: #eee;
+}
+
+/**
+ * Container/Target Styles
+ */
+
+.container{
+  padding: 2%;
+  min-height: 400px;
+  text-align: justify;
+  position: relative;
+}
+
+.container .mix,
+.container .gap{
+  width: 100px;
+  display: inline-block;
+  margin: 0 5%;
+}
+
+.container .mix{
+  width: 100px;
+  height: 100px;
+  margin: 5%;
+  background: white;
+  display: none;
+}
+
+
+/**
+ * Fail message styles
+ */
+
+.container .fail-message{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  transition: 150ms;
+}
+
+.container .fail-message:before{
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.container .fail-message span{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.container.fail .fail-message{
+  opacity: 1;
+  pointer-events: auto;
+}
+
 
