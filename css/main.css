@@ -24,6 +24,7 @@ body a:hover {
 	box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 	z-index: 1000000;
 	position: fixed;
+	top:0;
 }
 
 .header_text {
@@ -193,37 +194,18 @@ body a:hover {
 	background-color: green;
 }
 
-/*HAMBURGER CSS*/
+/*POST CSS*/
 
-.navbar-toggle .icon-bar:nth-of-type(2) {
-	  top: 1px;
+.post_container {
+	width: 80%;
+	background-color: #f4f4f4;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
 }
 
-.navbar-toggle .icon-bar:nth-of-type(3) {
-  	top: 2px;
-}
-
-.navbar-toggle .icon-bar {
-	  position: relative;
-	  transition: all 500ms ease-in-out;
-}
-
-.navbar-toggle.active .icon-bar:nth-of-type(1) {
-	  top: 6px;
-	  transform: rotate(45deg);
-}
-
-.navbar-toggle.active .icon-bar:nth-of-type(2) {
-	  background-color: transparent;
-}
-
-.navbar-toggle.active .icon-bar:nth-of-type(3) {
-	  top: -6px;
-	  transform: rotate(-45deg);
-}
-
-.icon-bar {
-	background-color: white;
+.padding_top2 {
+	padding-top: 200px;
 }
 
 
@@ -235,5 +217,14 @@ body a:hover {
 
 .clear:after {
     clear: both;
+}
+
+
+
+
+/*MIXITUP*/
+
+#Container .mix{
+	display: none;
 }
 
