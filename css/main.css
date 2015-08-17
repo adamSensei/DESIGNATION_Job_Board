@@ -38,11 +38,6 @@ body a:hover {
 
 }
 
-.padding_top_fixed {
-	padding-top: 54px;
-	background-color: #f9f9f9;
-}
-
 /*FILTERS SECTION START*/
 
 .filters {
@@ -53,6 +48,7 @@ body a:hover {
 	background-color: #f9f9f9;
 	height: 100%;
 	border-right: 1px solid #E7E2E3;
+	margin-top: 50px;
 }
 
 .filter_title {
@@ -98,6 +94,7 @@ body a:hover {
 	width: 83.5%;
 	text-align: center;
 	padding: 20px 0 13px 0;
+	margin-top: 50px;
 
 }
 
@@ -168,12 +165,12 @@ body a:hover {
 }
 
 .location {
-	padding-bottom: 32px;
+	padding: 5px 0 10px 0;
 	font-size: 16px;
 }
 
 .job_title {
-	padding-bottom: 21px;
+	padding-bottom: 5px;
 	font-size: 21px;
 }
 
@@ -192,20 +189,6 @@ body a:hover {
 	display: block;
 	float: right;
 	background-color: green;
-}
-
-/*POST CSS*/
-
-.post_container {
-	width: 80%;
-	background-color: #f4f4f4;
-	text-align: center;
-	margin: 0 auto;
-	position: relative;
-}
-
-.padding_top2 {
-	padding-top: 200px;
 }
 
 
